@@ -1,0 +1,21 @@
+.SpaceShip-template {
+	width: 600px;
+	height: 800px;
+	margin: 50px auto;
+}
+
+.SpaceShip-template .canvas {
+	width: 600px;
+	height: 800px;
+	background: black;
+	position: relative;
+}
+
+.SpaceShip-template .headline {
+	background-color: rgba(0, 0, 0, 0);
+	font-size: 5em;
+	font-weight: 800;
+	color: blue;
+	position: absolute;
+	z-index: 1;
+}

@@ -1,0 +1,21 @@
+.Covid3D-template[data-visible="true"] {
+	width: 100%;
+	height: 1000px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	background: rgb(56, 56, 56);
+	position: fixed;
+}
+
+.Covid3D-template[data-visible="false"] {
+	display: none;
+}
+
+
+.canvas {
+	width: 800px;
+	height: 1000px;
+	padding-left: 350px;
+	background: rgb(0, 0, 0);
+}
