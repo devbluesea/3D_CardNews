@@ -57,7 +57,7 @@ const Model = ({data}) => {
 	return (
 		<mesh onPointerOver={() => setHovered(true)}
 					onPointerOut={() => setHovered(false)}
-					onClick={() => setActive(!active)}
+					onDoubleClick={() => setActive(!active)}
 					scale={props.scale}
 					castShadow>
 			{model ? <primitive object={model.scene} >

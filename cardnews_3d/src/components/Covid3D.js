@@ -37,7 +37,7 @@ const Model = ({data}) => {
 
 	useFrame((state) => {
     const step = 0.1
-    state.camera.fov = THREE.MathUtils.lerp(state.camera.fov, active ? 10 : 42, step)
+    state.camera.fov = THREE.MathUtils.lerp(state.camera.fov, active ? 20 : 42, step)
 		if (data.Sync === true) {
 			state.camera.position.lerp(vec.set(data.Covid3D_camera_flag ? 150 : 300, data.Covid3D_camera_flag ? 150 : 300, data.Covid3D_camera_flag ? 150 : 300), step)
 		}
@@ -54,7 +54,7 @@ const Model = ({data}) => {
 	return (
 		<mesh onPointerOver={() => setHovered(true)}
 					onPointerOut={() => setHovered(false)}
-					onClick={() => setActive(!active)}
+					onDoubleClick={() => setActive(!active)}
 					scale={props.scale}
 					castShadow>
 			{model ? <primitive object={model.scene} >

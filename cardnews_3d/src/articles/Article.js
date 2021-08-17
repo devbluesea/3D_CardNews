@@ -10,7 +10,7 @@ const Article = ({ data }) => {
 			top: 0,
 			scrollTrigger: {
 				trigger: ".one",
-				markers: true,
+				//markers: true,
 				start: "0 60%",
 				toggleActions: "restart none none reset",
 				//scrub: true
@@ -21,7 +21,7 @@ const Article = ({ data }) => {
 			top: 0,
 			scrollTrigger: {
 				trigger: ".two",
-				markers: true,
+				//markers: true,
 				start: "0 60%",
 				toggleActions: "restart none none reset",
 				//scrub: true
@@ -32,7 +32,7 @@ const Article = ({ data }) => {
 			top: 0,
 			scrollTrigger: {
 				trigger: ".three",
-				markers: true,
+				//markers: true,
 				start: "0 60%",
 				toggleActions: "restart none none reset",
 				//scrub: true

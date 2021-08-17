@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import { throttle } from 'lodash';
 import CardNews from './CardNews';
-//import First from './First';
 import Covid3D from './Covid3D';
 import RNA3D from './RNA3D';
+
+import '../scss/Contents.scss';
 
 const Contents = () => {
 	const [ycoor, setYcoor] = useState({
@@ -50,18 +51,6 @@ const Contents = () => {
 				Antibody_visible: false
 			});
 		}
-		//if (window.pageYOffset > 500) {
-		//	setYcoor({
-		//		...ycoor,
-		//		Covid3D_visible: false
-		//	});
-		//}
-		//else {
-		//	setYcoor({
-		//		...ycoor,
-		//		Covid3D_visible: true
-		//	});
-		//}
 	};
 
 	const handleSync = (data) => {
@@ -73,12 +62,14 @@ const Contents = () => {
 
 	return (
 		<div>
-			{/*<button onClick={() => {handleSync(!ycoor.Sync)}}>Sync</button>*/}
-			<Covid3D data={ycoor} />
-			<RNA3D data={ycoor}/>
-			{/*<First flag={ycoor} />*/}
-			<CardNews data={ycoor}/>
-			{/*{console.log(ycoor.Sync)}*/}
+			<div>
+				<button className="sync-btn" onClick={() => {handleSync(!ycoor.Sync)}}>Sync</button>
+			</div>
+			<div>
+				<Covid3D data={ycoor} />
+				<RNA3D data={ycoor}/>
+				<CardNews data={ycoor}/>
+			</div>
 		</div>
 	);
 };

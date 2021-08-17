@@ -40,11 +40,12 @@
 };
 .one[data-onevisible="false"] {
 	display: none;
+	transition: 0.5s ease-out;
 };
 
 .one .haeder {
 	@include haederform() {
-		color: rgb(207, 136, 107)
+		color: rgb(165, 97, 70)
 	}
 };
 .one .body {
@@ -59,6 +60,7 @@
 };
 .two[data-twovisible="false"] {
 	display: none;
+	transition: 0.5s ease-out;
 };
 .two .haeder {
 	@include haederform() {
@@ -77,10 +79,11 @@
 };
 .three[data-threevisible="false"] {
 	display: none;
+	transition: 0.5s ease-out;
 };
 .three .haeder {
 	@include haederform() {
-		color: rgb(50, 255, 255)
+		color: rgb(117, 117, 117)
 	}
 };
 .three .body {
