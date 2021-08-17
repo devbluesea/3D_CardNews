@@ -1,20 +1,88 @@
-.one {
-	text-align: left;
-	opacity: 1;
-	position: sticky;
-	transition: 0.5s ease-out;
+.Article-template {
+	--shadow-color: #00000029;
+	--cardview-width: 310px;
+	--cardview-height: 200px;
 }
 
-.two {
-	text-align: left;
-	opacity: 0;
-	position: sticky;
-	transition: 0.5s ease-out;
-}
-
-.three {
+@mixin cardform {
+	width: var(--cardview-width);
+	height: var(--cardview-height);
+	box-shadow: 3px 3px 10px 0 var(--shadow-color);
+	border-radius: 20px;
 	text-align: left;
 	opacity: 0;
 	//position: sticky;
+	padding: 30px;
 	transition: 0.5s ease-out;
-}
+	color: black;
+	background: rgba(255, 255, 255, 0.7);
+	backdrop-filter: blur(7px);
+	@content
+};
+
+@mixin haederform {
+	font-weight: 800;
+	font-size: 42px;
+	@content
+};
+
+@mixin bodyform {
+	font-size: 13px;
+	margin-top: 20px;
+	position: relative;
+	@content
+};
+
+.one[data-onevisible="true"] {
+	@include cardform() {
+		//background-color: rgba(240, 191, 162, 0.7)
+	}
+};
+.one[data-onevisible="false"] {
+	display: none;
+};
+
+.one .haeder {
+	@include haederform() {
+		color: rgb(207, 136, 107)
+	}
+};
+.one .body {
+	@include bodyform()
+};
+
+
+.two[data-twovisible="true"] {
+	@include cardform() {
+		margin-top: 510px;
+	}
+};
+.two[data-twovisible="false"] {
+	display: none;
+};
+.two .haeder {
+	@include haederform() {
+		color: rgb(80, 80, 80)
+	}
+};
+.two .body {
+	@include bodyform()
+};
+
+
+.three[data-threevisible="true"] {
+	@include cardform() {
+		margin-top: 600px;
+	}
+};
+.three[data-threevisible="false"] {
+	display: none;
+};
+.three .haeder {
+	@include haederform() {
+		color: rgb(50, 255, 255)
+	}
+};
+.three .body {
+	@include bodyform()
+};

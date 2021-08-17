@@ -68,7 +68,7 @@ const Model = ({data}) => {
 
 const RNA3D = ({data}) => {
 	return (
-		<div className="Covid3D-template" data-visible={data.RNA3D_visible}>
+		<div className="Covid3D-template" data-visible={data.Antibody_visible}>
 				<div className="canvas">
 					<Canvas camera={{ position: [150, 150, 150] }} onCreated={({gl}) => {
 						gl.shadowMap.enabled = true

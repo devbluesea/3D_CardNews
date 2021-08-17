@@ -9,7 +9,10 @@ const Contents = () => {
 	const [ycoor, setYcoor] = useState({
 		Covid3D_camera_flag: false,
 		Covid3D_visible: true,
-		RNA3D_visible: false,
+		Antibody_visible: false,
+		Article_one: true,
+		Article_two: false,
+		Article_three: false,
 		Sync: true
 	});
 
@@ -22,16 +25,20 @@ const Contents = () => {
 
 	const handleScroll = () => {
 		console.log(window.pageYOffset);
-		if (window.pageYOffset > 300) {
+		if (window.pageYOffset > 500) {
 			setYcoor({
 				...ycoor,
-				Covid3D_camera_flag: true
+				Covid3D_camera_flag: true,
+				Article_one: false,
+				Article_two: true
 			});
-			if (window.pageYOffset > 660) {
+			if (window.pageYOffset > 900) {
 				setYcoor({
 					...ycoor,
 					Covid3D_visible: false,
-					RNA3D_visible: true
+					Antibody_visible: true,
+					Article_two: false,
+					Article_three: true
 				});
 			}
 		}
@@ -40,7 +47,7 @@ const Contents = () => {
 				...ycoor,
 				Covid3D_camera_flag: false,
 				Covid3D_visible: true,
-				RNA3D_visible: false
+				Antibody_visible: false
 			});
 		}
 		//if (window.pageYOffset > 500) {
@@ -70,8 +77,8 @@ const Contents = () => {
 			<Covid3D data={ycoor} />
 			<RNA3D data={ycoor}/>
 			{/*<First flag={ycoor} />*/}
-			<CardNews />
-			{console.log(ycoor.Sync)}
+			<CardNews data={ycoor}/>
+			{/*{console.log(ycoor.Sync)}*/}
 		</div>
 	);
 };

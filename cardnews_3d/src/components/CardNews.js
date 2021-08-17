@@ -3,7 +3,7 @@ import { throttle } from 'lodash';
 import Article from '../articles/Article';
 import '../scss/CardNews.scss';
 
-const CardNews = () => {
+const CardNews = ({ data }) => {
 
 	//const [ScrollY, setScrollY] = useState(0);  // 스크롤값을 저장하기 위한 상태
 
@@ -40,7 +40,7 @@ const CardNews = () => {
 	return (
 		<div className="CardNews-template">
 			<div className="wrapper" >
-				<Article/>
+				<Article data={data}/>
 			</div>
 		</div>
 	);
