@@ -4,7 +4,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
-	//background: rgba(0, 0, 0, 0.322);
+	//background: rgba(255, 255, 255, 0.322);
 	position: fixed;
 }
 
@@ -13,10 +13,30 @@
 }
 
 
-.canvas {
+.Covid3D-template .canvas {
 	width: 1000px;
 	height: 1000px;
 	margin-left: 130px;
 	//padding-left: 350px;
 	//background: rgb(0, 0, 0);
+}
+
+@media (max-width: 1280px) {
+	.Covid3D-template .canvas {
+		width: 750px;
+		height: 750px;
+		display: flex;
+		justify-content: center;
+		padding: 0 0 200px 0px;
+	}
+}
+
+@media (max-width: 530px) {
+	.Covid3D-template .canvas {
+		display: flex;
+		justify-content: center;
+		width: 120vw;
+		height: 120vw;
+		padding: 0 0 370px 70px;
+	}
 }

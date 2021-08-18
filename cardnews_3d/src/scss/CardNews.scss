@@ -16,3 +16,15 @@
 	transition: ease-out;
 	position: relative;
 }
+
+@media (max-width: 1280px) {
+	.CardNews-template .comment {
+		font-size: 12vw;
+	}
+}
+
+@media (max-width: 900px) {
+	.CardNews-template .comment {
+		font-size: 13vw;
+	}
+}

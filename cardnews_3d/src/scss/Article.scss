@@ -43,7 +43,6 @@
 	display: none;
 	transition: 0.5s ease-out;
 };
-
 .one .haeder {
 	@include haederform() {
 		color: rgb(165, 97, 70)
@@ -116,5 +115,21 @@
 		transition: 0.3s;
 		filter: brightness(90%);
 		cursor: pointer;
+	}
+}
+
+@media (max-width: 1280px) {
+	.Article-template {
+		display: flex;
+		justify-content: center;
+	}
+	.one {
+		margin-top: 20px;
+	}
+	.two {
+		margin-top: 20px;
+	}
+	.three {
+		margin-top: 20px;
 	}
 }
