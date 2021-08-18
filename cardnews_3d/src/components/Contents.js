@@ -38,6 +38,7 @@ const Contents = () => {
 					...ycoor,
 					Covid3D_visible: false,
 					Antibody_visible: true,
+					Article_one: false,
 					Article_two: false,
 					Article_three: true
 				});

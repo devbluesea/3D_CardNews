@@ -9,8 +9,8 @@
 	height: var(--cardview-height);
 	box-shadow: 3px 3px 10px 0 var(--shadow-color);
 	border-radius: 20px;
-	text-align: left;
-	opacity: 0;
+	text-align: justify;
+	opacity: 1;
 	//position: sticky;
 	padding: 30px;
 	transition: 0.5s ease-out;
@@ -29,12 +29,13 @@
 @mixin bodyform {
 	font-size: 13px;
 	margin-top: 20px;
-	position: relative;
 	@content
 };
 
 .one[data-onevisible="true"] {
 	@include cardform() {
+		position: fixed;
+		top: 500px
 		//background-color: rgba(240, 191, 162, 0.7)
 	}
 };
@@ -55,7 +56,8 @@
 
 .two[data-twovisible="true"] {
 	@include cardform() {
-		margin-top: 510px;
+		position: fixed;
+		top: 500px;
 	}
 };
 .two[data-twovisible="false"] {
@@ -74,7 +76,8 @@
 
 .three[data-threevisible="true"] {
 	@include cardform() {
-		margin-top: 600px;
+		position: fixed;
+		top: 500px;
 	}
 };
 .three[data-threevisible="false"] {
