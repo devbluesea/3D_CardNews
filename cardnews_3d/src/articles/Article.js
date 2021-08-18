@@ -45,7 +45,7 @@ const Article = ({ data }) => {
 		<div className="Article-template">
 			{/*<section className="card-section-one">*/}
 				<div className="one" data-onevisible={data.Article_one}>
-					<div className="haeder">COVID-19 </div>
+					<div className="haeder">카드뉴스 </div>
 					{/*<div><button className="sync-btn">Sync</button></div>*/}
 					<div className="body">
 						generator should succeed. This generator should be used and succeed. We will not go. Try hard to achieve everything you can succeed. We are extra cool everyday dancing. We are extra cool everyday dancing. This generator should be used and succeed. Try hard to achieve everything We will not try to bow and go. We are dancing.
