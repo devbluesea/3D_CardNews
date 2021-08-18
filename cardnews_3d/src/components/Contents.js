@@ -62,14 +62,11 @@ const Contents = () => {
 	}
 
 	return (
-		<div>
-			<div>
-				<button className="sync-btn" onClick={() => {handleSync(!ycoor.Sync)}}>Sync</button>
-			</div>
+		<div className="Contents-template">
 			<div>
 				<Covid3D data={ycoor} />
 				<RNA3D data={ycoor}/>
-				<CardNews data={ycoor}/>
+				<CardNews data={ycoor} sync={handleSync}/>
 			</div>
 		</div>
 	);

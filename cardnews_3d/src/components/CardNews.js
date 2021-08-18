@@ -1,46 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Article from '../articles/Article';
 import '../scss/CardNews.scss';
 
-const CardNews = ({ data }) => {
+const CardNews = ({ data, sync }) => {
 
-	//const [ScrollY, setScrollY] = useState(0);  // 스크롤값을 저장하기 위한 상태
-
-	//const handleFollow = () => {
-  //  setScrollY(window.pageYOffset); // window 스크롤 값을 ScrollY에 저장
-  //}
-
-	//useEffect(() => {
-  //  console.log("ScrollY is ", ScrollY); // ScrollY가 변화할때마다 값을 콘솔에 출력
-  //}, [ScrollY])
-
-	//useEffect(() => {
-  //  const watch = () => {
-  //    window.addEventListener('scroll', handleFollow);
-  //  }
-  //  watch(); // addEventListener 함수를 실행
-	//	console.log("ScrollY is ", ScrollY); // ScrollY가 변화할때마다 값을 콘솔에 출력
-  //  return () => {
-  //    window.removeEventListener('scroll', handleFollow); // addEventListener 함수를 삭제
-  //  }
-  //}, [ScrollY])
-
-	//useEffect(() => {
-	//	window.addEventListener('scroll', throttle(handleScroll, 30));
-	//	return () => {
-	//		window.removeEventListener('scroll', throttle(handleScroll, 30)); //clean up
-	//	};
-	//}, []);
-
-	//const handleScroll = () => {
-	//	console.log(window.pageYOffset);
-	//};
+	useEffect(() => {
+		gsap.to(".comment", {
+			opacity: 1,
+			//top: 0,
+			padding: "130px 0 0 0",
+			scrollTrigger: {
+				trigger: ".comment",
+				//markers: true,
+				start: "0 60%",
+				toggleActions: "restart none none reset",
+				//scrub: true
+			}
+		});
+	}, []);
+	gsap.registerPlugin(ScrollTrigger);
 
 	return (
 		<div className="CardNews-template">
-			<div className="comment">COVID&nbsp;&#45;19</div>
 			<div>
-				<Article data={data}/>
+				<div className="comment">COVID&nbsp;&#45;19</div>
+				<div>
+					<Article data={data} sync={sync}/>
+				</div>
 			</div>
 		</div>
 	);

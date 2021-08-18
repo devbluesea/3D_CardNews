@@ -3,7 +3,7 @@ import '../scss/Article.scss';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const Article = ({ data }) => {
+const Article = ({ data, sync }) => {
 	useEffect(() => {
 		gsap.to(".one", {
 			opacity: 1,
@@ -45,20 +45,28 @@ const Article = ({ data }) => {
 		<div className="Article-template">
 			{/*<section className="card-section-one">*/}
 				<div className="one" data-onevisible={data.Article_one}>
+				<div className="wrapper">
 					<div className="haeder">카드뉴스 </div>
-					{/*<div><button className="sync-btn">Sync</button></div>*/}
+					<div><button className="sync-btns" onClick={() => sync(!data.Sync)}>Sync</button></div>
+				</div>
 					<div className="body">
 						generator should succeed. This generator should be used and succeed. We will not go. Try hard to achieve everything you can succeed. We are extra cool everyday dancing. We are extra cool everyday dancing. This generator should be used and succeed. Try hard to achieve everything We will not try to bow and go. We are dancing.
 					</div>
 				</div>
 				<div className="two" data-twovisible={data.Article_two}>
-					<div className="haeder">바이러스 구조</div>
+					<div className="wrapper">
+						<div className="haeder">바이러스 구조</div>
+						<div><button className="sync-btns" onClick={() => sync(!data.Sync)}>Sync</button></div>
+					</div>
 					<div className="body">
 						This generator should be used and succeed. Try hard to achieve everything succeed. We will not try to bow and go. We will not try to bow and go. Indeed so. We are dancing. Indeed so. Some women should never cry. Some women cry. We are extra dancing. We are extra cool everyday dancing. We will not try to go. Try hard succeed.
 					</div>
 				</div>
 				<div className="three" data-threevisible={data.Article_three}>
-					<div className="haeder">항체의 역할</div>
+					<div className="wrapper">
+						<div className="haeder">항체의 역할</div>
+						<div><button className="sync-btns" onClick={() => sync(!data.Sync)}>Sync</button></div>
+					</div>
 					<div className="body">
 						Try hard to achieve everything succeed. We will not try to bow and go. We will not try to bow and go. Indeed so. We are dancing. Indeed so. Some women should never cry. Some women cry. We are extra dancing. We are extra cool everyday dancing. We will not try to go. Try hard succeed.
 					</div>
