@@ -2,12 +2,16 @@
 	//margin-top: 20px;
 	width: 370px;
 	height: 2000px;
-	background: rgba(199, 19, 19, 0.315);
+	//background: rgba(199, 19, 19, 0.315);
 	margin: 0px 0px 0px 550px;
 	position: relative;
 	//top: 500px;
 }
 
-.CardNews-template .wrapper {
+.CardNews-template .comment {
 	color: white;
+	display: flex;
+	font-size: 175px;
+	font-weight: 800;
+	padding-top: 130px;
 }

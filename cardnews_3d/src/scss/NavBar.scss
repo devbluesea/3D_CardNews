@@ -18,7 +18,7 @@
 .NavBar-Template .Wrapper {
 	display: flex;
 	height: 60px;
-	width: 830px;
+	width: 800px;
 	//background-color: brown;
 	@include align() {
 		justify-content: space-between;
@@ -27,7 +27,7 @@
 
 .NavBar-Template .Wrapper .Logo {
 	//background: plum;
-	width: 65px;
+	width: 35px;
 	cursor: pointer;
 }
 

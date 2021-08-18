@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { throttle } from 'lodash';
+import React from 'react';
 import Article from '../articles/Article';
 import '../scss/CardNews.scss';
 
-const CardNews = ({ data }, setYcoor) => {
+const CardNews = ({ data }) => {
 
 	//const [ScrollY, setScrollY] = useState(0);  // 스크롤값을 저장하기 위한 상태
 
@@ -39,7 +38,8 @@ const CardNews = ({ data }, setYcoor) => {
 
 	return (
 		<div className="CardNews-template">
-			<div className="wrapper" >
+			<div className="comment">COVID&nbsp;&#45;19</div>
+			<div>
 				<Article data={data}/>
 			</div>
 		</div>
