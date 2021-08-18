@@ -2,14 +2,16 @@
 카드뉴스를 웹에서 3D모델과 함께 볼 수 있는 콘텐츠
 
 <br>
-### 개발 Server 실행
+
+### 사용한 라이브러리
 React-Three-Fiber<br>
 Drei<br>
 GSAP<br>
 lodash
 
 <br>
-### 개발 Server 실행
+
+### 실행방법
 <br>
 
 ```bash
@@ -17,6 +19,7 @@ npm install
 ```
 Node modules 설치
 <br>
+
 ### 개발 Server 실행
 ```bash
  yarn start
