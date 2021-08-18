@@ -4,10 +4,10 @@
 <br>
 
 ### 사용한 라이브러리
-React-Three-Fiber<br>
-Drei<br>
-GSAP<br>
-lodash
+1. React-Three-Fiber<br>
+2. Drei<br>
+3. GSAP<br>
+4. lodash
 
 <br>
 
