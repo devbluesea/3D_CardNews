@@ -9,8 +9,6 @@
 4. lodash
 
 ### 실행방법
-<br>
-
 ```bash
 npm install
 ```
