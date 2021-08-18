@@ -17,15 +17,8 @@ const Contents = () => {
 		Sync: true
 	});
 
-	useEffect(() => {
-		window.addEventListener('scroll', throttle(handleScroll, 300));
-		return () => {
-			window.removeEventListener('scroll', throttle(handleScroll, 300)); //clean up
-		};
-	}, []);
-
 	const handleScroll = () => {
-		console.log(window.pageYOffset);
+		//console.log(window.pageYOffset);
 		if (window.pageYOffset > 500) {
 			setYcoor({
 				...ycoor,
@@ -53,6 +46,13 @@ const Contents = () => {
 			});
 		}
 	};
+
+	useEffect(() => {
+		window.addEventListener('scroll', throttle(handleScroll, 300));
+		return () => {
+			window.removeEventListener('scroll', throttle(handleScroll, 300)); //clean up
+		};
+	}, []);
 
 	const handleSync = (data) => {
 		setYcoor({
