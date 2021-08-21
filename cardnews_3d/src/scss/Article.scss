@@ -38,6 +38,10 @@
 		top: 530px;
 		//background-color: rgba(240, 191, 162, 0.7)
 	}
+	@media (max-width: 720px) {
+		position: fixed;
+		top: 380px;
+	}
 };
 .one[data-onevisible="false"] {
 	display: none;
@@ -58,6 +62,10 @@
 		position: fixed;
 		top: 530px;
 	}
+	@media (max-width: 720px) {
+		position: fixed;
+		top: 380px;
+	}
 };
 .two[data-twovisible="false"] {
 	display: none;
@@ -77,6 +85,10 @@
 	@include cardform() {
 		position: fixed;
 		top: 530px;
+	}
+	@media (max-width: 720px) {
+		position: fixed;
+		top: 380px;
 	}
 };
 .three[data-threevisible="false"] {
@@ -120,16 +132,74 @@
 
 @media (max-width: 1280px) {
 	.Article-template {
+		//--cardview-width: 210px;
+		//--cardview-height: 200px;
+
 		display: flex;
 		justify-content: center;
+		.haeder {
+			font-weight: 800;
+			font-size: 24px;
+		}
+		.body {
+			font-weight: 300;
+			font-size: 11px;
+			margin-top: 15px;
+		}
+
+		.sync-btns {
+			margin: 0 0 0 0;
+			width: 30px;
+			height: 30px;
+			font-size: 10px;
+			font-weight: 700;
+			padding: 0 0 0 0;
+		}
 	}
 	.one {
-		margin-top: 20px;
+		margin-top: 0px;
 	}
 	.two {
-		margin-top: 20px;
+		margin-top: 0px;
 	}
 	.three {
-		margin-top: 20px;
+		margin-top: 0px;
+	}
+}
+
+@media (max-width: 720px) {
+	.Article-template {
+		--cardview-width: 40vw;
+		--cardview-height: 230px;
+
+		.haeder {
+			font-weight: 800;
+			font-size: 17px;
+		}
+		.body {
+			font-weight: 300;
+			font-size: 10px;
+			margin-top: 15px;
+		}
+
+		.sync-btns {
+			margin: 0 0 0 0;
+			width: 21px;
+			height: 21px;
+			font-size: 8px;
+			font-weight: 700;
+			padding: 0 0 0 0;
+		}
+	}
+
+
+
+	.sync-btns {
+		margin: 0 0 0 0;
+		width: 5px;
+		height: 5px;
+		font-size: 8px;
+		font-weight: 700;
+		padding: 0 0 0 0;
 	}
 }
